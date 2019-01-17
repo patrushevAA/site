@@ -1,0 +1,136 @@
+html, body {
+	height: 100%;
+	background: url("white-cubes.png");
+	margin:0px;
+}
+
+.table-layout {
+	display:table;
+	width:100%;
+	height:100%;
+}
+
+header,
+footer {
+  display: table-row;
+  height: 65px;
+  background-color: rgba(255, 0, 255, 0.5);
+}
+
+footer {
+	text-align:right;
+	vartical-align: bottom;
+}
+
+main {
+  display: table;
+  width: 100%;
+  height: 100%;
+  border-spacing: 10px;
+}
+
+.content,
+.side {
+  display: table-cell;
+  
+}
+
+.content {
+	border:1px solid #808080;
+	border-radius: 10px;
+	background-color: rgba(128, 128, 128, 0.3);
+}
+
+.side {
+  width: 200px;
+}
+
+nav {
+	display:table;
+	border-spacing:5px 5px;
+	margin:auto;
+}
+
+nav ul {
+	display:table-row;
+	text-align:center;
+}
+
+nav ul li{
+	display:table-cell;
+	text-align:center;
+}
+
+.menu-main {
+  list-style: none;
+  margin: 40px 0 5px;
+  padding: 25px 0 5px;
+  text-align: center;
+}
+.menu-main li {display: inline-block;}
+.menu-main li:after {
+  content: "|";
+  color: #606060;
+  display: inline-block;
+  vertical-align:top;
+}
+.menu-main li:last-child:after {content: none;}
+.menu-main a {
+  text-decoration: none;
+  font-family: 'Ubuntu Condensed', sans-serif;
+  letter-spacing: 2px;
+  position: relative;
+  padding-bottom: 20px;
+  margin: 0 34px 0 30px;
+  font-size: 17px;
+  text-transform: uppercase;
+  display: inline-block;
+  transition: color .2s;
+}
+.menu-main a, .menu-main a:visited {color: #696969;}
+.menu-main a.current, .menu-main a:hover{color: #feb386;}
+.menu-main a:before,
+.menu-main a:after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  top: auto;
+  right: 50%;
+  bottom: -5px;
+  left: 50%;
+  background: #feb386;
+  transition: .8s;
+}
+.menu-main a:hover:before, .menu-main .current:before {left: 0;}
+.menu-main a:hover:after, .menu-main .current:after {right: 0;}   
+@media (max-width: 550px) {
+.menu-main {padding-top: 0;}
+.menu-main li {display: block;}
+.menu-main li:after {content: none;}
+.menu-main a {
+  padding: 25px 0 20px; 
+  margin: 0 30px;
+}
+}
+
+.side-menu {
+	padding:0px;
+}
+
+.side-menu a {
+  display:block;
+  margin-bottom: 1px;
+  height: 40px;
+  text-decoration: none;
+  font-family: 'Ubuntu Condensed', sans-serif;
+  letter-spacing: 1px;
+  font-size: 14px;
+  border: 1px solid #808080;
+  padding: 2px 5px;
+  border-radius: 10px;
+}
+
+.side-menu a, .side-menu a:visited {color: #696969;}
+.side-menu a.current, .side-menu a:hover{color: black;}
+
+.side-menu a:hover{background-color: rgba(128, 128, 128, 0.3);}
